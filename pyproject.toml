@@ -1,0 +1,24 @@
+[project]
+name = "emma6-chat"
+version = "0.1.0"
+description = "Minimal REPL for chatting with egomnia/emma-6 via ONNX Runtime"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "sentencepiece",
+    "huggingface_hub",
+    # CUDA build where NVIDIA wheels exist; CPU-only build on macOS (no onnxruntime-gpu for Mac).
+    "onnxruntime-gpu[cuda,cudnn]>=1.22; sys_platform != 'darwin'",
+    "onnxruntime>=1.22; sys_platform == 'darwin'",
+]
+
+[project.scripts]
+emma6 = "emma6_chat:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+only-include = ["emma6_chat.py"]

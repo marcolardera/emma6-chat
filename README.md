@@ -50,3 +50,19 @@ Useful options (see `uv run emma6 --help`):
 - The model card doesn't document a chat template. Both formats above come from special tokens in the
   tokenizer.
 - The tokenizer turns newlines into spaces, so the model's replies come out as one paragraph.
+
+## Disclaimer
+
+This is an independent, unofficial project and is not affiliated with, endorsed by, or sponsored by
+Egomnia S.p.A. "Emma-6" and "Egomnia" are names/trademarks of their respective owner, used here only to
+identify the model this tool runs.
+
+This repository contains only client code. The model weights are not included; they are downloaded at
+runtime from [egomnia/emma-6](https://huggingface.co/egomnia/emma-6) and are subject to their own license
+(OpenRAIL, as declared on the model card), including its use restrictions. Model outputs may be inaccurate.
+See the model card's *Limitations* and *Out-of-Scope Use* sections.
+
+## License
+
+The code in this repository is released under the [MIT License](LICENSE). This license covers the code only,
+not the Emma-6 model.

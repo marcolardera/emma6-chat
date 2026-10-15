@@ -3,6 +3,8 @@ name = "emma6-chat"
 version = "0.1.0"
 description = "Minimal REPL for chatting with egomnia/emma-6 via ONNX Runtime"
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.10"
 dependencies = [
     "numpy",
